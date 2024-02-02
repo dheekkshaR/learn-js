@@ -10,6 +10,8 @@ function createTRNode(colNodes) {
   return trNode;
 }
 
+
+
 function createTDNode(childNode) {
   let tdNode = document.createElement("td");
   tdNode.classList.add('tdNode');

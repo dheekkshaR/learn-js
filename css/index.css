@@ -10,7 +10,7 @@ button {
     font-size: 1.2em;
 }
 
-table, .tdNode {
+table, .tdNode , td{
   border: 1px solid red;
 }
 
