@@ -21,6 +21,9 @@ class PStackImpl extends PStack {
   }
 
   pop() {
+    if (this._persons.length === 0) {
+      return null; // Return null or handle empty stack scenario
+    }
     return this._persons.pop().age
   }
 }
@@ -28,6 +31,7 @@ class PStackImpl extends PStack {
 let pstack = new PStackImpl();
 pstack.persons = [{name: 'Jojo', age: 21}, {name: 'Gabi', age: 29}]
 pstack.push({name: 'Dein', age: 19});
+// console.log(pstack);
 console.log(pstack.pop());
 console.log(pstack.pop());
 console.log(pstack.persons);

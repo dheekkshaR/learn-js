@@ -24,7 +24,22 @@
       // Using map to calculate the square root of each number
       // Use Math.sqrt(number) to calculate sq root
       const squareRoots = numbers.map(number => {
-        return 0
+        if (number < 0) {
+        // Log an error message for negative numbers
+        console.log("Error: runtime exception occurs due to square root on a negative number : "+(number));
+        // Return NaN
+        return NaN;
+        }
+        try{
+        const ans=Math.sqrt(number);
+        return ans;
+        }
+        catch (error) {
+        // Handle the error (e.g., negative number)
+        console.log("Error: runtime exception occurs due to square root on a negative number");
+        // Return NaN if an error occurs
+        return NaN;
+    }
     });
 
       // Displaying the original and transformed arrays
